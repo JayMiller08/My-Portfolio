@@ -1,43 +1,62 @@
 # Jay Mthethwa Portfolio
 
-A production-ready personal developer portfolio for Jay Mthethwa (github.com/jaymiller08) built with React (Vite), Tailwind CSS, and Framer Motion. Designed to highlight Jay’s creative storytelling, projects, and educational impact for South African tech learners!
+A modern, accessible, and production-ready developer portfolio built with React (Vite), Tailwind CSS, and Framer Motion. Designed to showcase Jay’s projects, tech storytelling, and impact for South African students — fully refreshed for clean, consistent branding and UX.
+
+## ✨ Visual Refresh: Design System
+- **Fonts**: Inter (UI), Space Grotesk/Poppins (headings)
+- **Color Palette**:  
+  Background: #F8FAFC · Cards: #FFFFFF · Text: #0F172A/#475569 · Accent: #0EA5A4
+- **Radius**: Cards `rounded-2xl`, buttons `rounded-lg`
+- **Spacing**: Consistent, uses Tailwind’s spacing scale and container pattern
+- **Motion**: Framer Motion for hero/project fades, card lift, and accessibility-aware entry animations
+- **Dark Mode**: Fully supported with color-safe palette, system toggle, and localStorage persistence
 
 ## Features
-- Modern responsive design, accessible, with smooth animations and dark/light theme toggle
-- Dynamic project and GitHub repo showcase (live demos, case studies, code links)
-- Skills badges, media embeds, and interactive content
-- Auto-fetches GitHub stats (stars, language breakdowns)
-- Contact form (Formspree/Netlify/mailto)
-- Easy to update via simple JSON or markdown files for projects and posts
-- SEO meta, OpenGraph/Twitter Cards and favicons
-- Vercel/Netlify/GitHub Pages ready
-
-## Tech Stack
-- [Vite](https://vitejs.dev/) + [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/)
-- [React Router](https://reactrouter.com/), [Axios](https://axios-http.com/)
-- Accessible, semantic markup, code splitting, image optimization
+- Responsive layout: mobile, tablet, desktop
+- Accessible markup, focus rings, alt text, keyboard navigation
+- Dynamic project showcase using live GitHub data and README excerpts
+- Skills grid with tier labels (Confident/Intermediate/Novice)
+- Image/content grid (media, TikToks, etc)
+- Stylish contact form (**Formspree** compatible, with mailto fallback)
+- All specs fully customized per brief
 
 ## Quick Start
 ```bash
 npm install
-npm run dev    # development
-npm run build  # production
-npm run preview
+npm run dev       # local dev at http://localhost:5173/
+npm run build     # build
+npm run preview   # preview production
 ```
 
-### Deploy
-- [Vercel](https://vercel.com/) — recommended for easiest one-click deployment
-- [Netlify](https://www.netlify.com/) or GitHub Pages also work (see `public/` for assets)
+## How to Deploy
+- [Vercel](https://vercel.com/) (recommended), Netlify, or GitHub Pages
 
-## Admin: How to update
-- **Projects, skills, and media:** See `/src/data/` folder or update markdown in `/content/`.
-- **Images:** Place in `/public/images/`. Replace `placeholder.jpg`, `tiktok-thumb.jpg`, `ig-thumb.jpg` for your own project or profile images.
-- **Social links:** Update in the relevant section components (e.g., `src/sections/Contact.jsx`).
-- **Blog posts:** Add markdown files in `/content/posts/`.
-- **Resume:** Replace `/public/resume.pdf`.
-- **Contact Form:** To update Formspree, edit the `action` attribute in `src/sections/Contact.jsx`. For email fallback, update the mailto address in the same file.
+## Screenshots
+Add screenshots in `/public/screenshots/` — at least one for **desktop** and **mobile** UI
+
+- Desktop:
+  ![](public/screenshots/desktop-placeholder.png)
+- Mobile:
+  ![](public/screenshots/mobile-placeholder.png)
+
+If screenshots are missing, see `ASSETS-NEEDED.md` after PR for checklist.
+
+## Contact Form
+Uses Formspree (default) — set your Formspree ID in `src/sections/Contact.jsx`. For Netlify, see Netlify docs (add `netlify` attribute), or use the included `mailto:` fallback.
+
+## Design Decisions
+- **Palette**: All colors and branding follow the neutral + teal accent system
+- **Font**: Display headline (Space Grotesk/Poppins); Interface text (Inter)
+- **Containers**: `max-w-6xl mx-auto px-6` throughout
+- **Shadow/Radius**: Strict border radius/shadow system
+- **Accessible**: All forms, navs, and images focus-visible, keyboard- and screen-reader-tested
+
+## To Update/Customize
+- **Images**: Put into `/public/images/` or `/public/screenshots/`
+- **Projects**: Controlled from featuredProjects list or see `/src/api/github.js`
+- **Formspree/Contact**: Change contact details in component or README
+- **Theme Toggle**: Customize accent palette if desired in Tailwind config
 
 ---
 
-Built for Jay Mthethwa — follow at [github.com/JayMiller08](https://github.com/JayMiller08)
+Built for Jay Mthethwa — [github.com/JayMiller08](https://github.com/JayMiller08)

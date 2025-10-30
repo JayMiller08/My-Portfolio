@@ -4,7 +4,7 @@ const API = 'https://api.github.com';
 const USER = 'JayMiller08';
 
 // Optionally provide in .env for authenticated requests
-env: import.meta.env.VITE_GITHUB_TOKEN
+// const token = import.meta.env.VITE_GITHUB_TOKEN;
 
 export async function fetchProfile() {
   const res = await axios.get(`${API}/users/${USER}`);
