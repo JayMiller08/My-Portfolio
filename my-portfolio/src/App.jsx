@@ -22,21 +22,21 @@ function Header() {
     { id: 'contact', label: 'Contact' },
   ];
   return (
-    <header className="sticky top-0 z-30 bg-white/80 dark:bg-gray-950/80 backdrop-blur border-b border-transparent shadow-none transition-all">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between py-4 ">
-        <span className="font-black text-3xl tracking-tighter text-blue-700 dark:text-blue-400">JayMthethwa.dev</span>
-        <nav className="hidden md:flex gap-6 text-lg font-semibold relative">
+    <header className="sticky top-0 z-30 bg-white/95 dark:bg-accent-900/95 backdrop-blur-sm border-b border-accent-200 dark:border-accent-700 shadow-sm transition-all">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-4">
+        <span className="font-bold text-2xl tracking-tight text-primary-700 dark:text-primary-400">JayMthethwa.dev</span>
+        <nav className="hidden md:flex gap-8 text-sm font-medium relative">
         {navLinks.map(link => (
           <a
             key={link.id}
             href={`#${link.id}`}
-            className={`pb-1 hover:text-blue-500 transition inline-block border-b-2 ${active===link.id?'border-blue-500':'border-transparent'}`}
+            className={`pb-1 text-accent-700 dark:text-accent-300 hover:text-primary-600 dark:hover:text-primary-400 transition inline-block border-b-2 ${active===link.id?'border-primary-600 dark:border-primary-400':'border-transparent'}`}
             onClick={() => setActive(link.id)}
           >{link.label}</a>
         ))}
         </nav>
-        <div className="flex items-center gap-4">
-          <a href="/resume.pdf" download className="rounded-xl px-4 py-2 font-bold bg-gradient-to-r from-blue-600 to-blue-400 text-white shadow-md hover:shadow-lg transition">Download Resume</a>
+        <div className="flex items-center gap-3">
+          <a href="/resume.pdf" download className="rounded-lg px-5 py-2 text-sm font-semibold bg-primary-600 hover:bg-primary-700 text-white shadow-sm hover:shadow-md transition-all">Download Resume</a>
           <ThemeToggle />
         </div>
       </div>
@@ -60,11 +60,11 @@ function ThemeToggle() {
     }
   };
   return (
-    <button aria-label="Toggle dark mode" onClick={toggleTheme} className="border-2 border-gray-300 dark:border-gray-700 rounded-full w-11 h-11 flex items-center justify-center bg-white/80 dark:bg-gray-900/70 shadow">
+    <button aria-label="Toggle dark mode" onClick={toggleTheme} className="border border-accent-300 dark:border-accent-600 rounded-lg w-10 h-10 flex items-center justify-center bg-white dark:bg-accent-800 hover:bg-accent-50 dark:hover:bg-accent-700 shadow-sm transition-all">
       {dark ? (
-        <span aria-hidden className="text-yellow-400 text-2xl">🌙</span>
+        <span aria-hidden className="text-yellow-400 text-xl">🌙</span>
       ) : (
-        <span aria-hidden className="text-blue-600 text-2xl">☀️</span>
+        <span aria-hidden className="text-primary-600 text-xl">☀️</span>
       )}
     </button>
   );
@@ -72,16 +72,13 @@ function ThemeToggle() {
 
 function Hero() {
   return (
-    <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="py-20 md:py-36 px-4 flex flex-col items-center text-center bg-gradient-to-b from-blue-50/80 via-white to-transparent dark:from-gray-900 dark:via-gray-950 dark:to-transparent">
-      <h1 className="text-5xl md:text-7xl font-black mb-6 leading-none tracking-tight bg-gradient-to-r from-blue-700 via-blue-400 to-fuchsia-500 text-transparent bg-clip-text">Jay Mthethwa</h1>
-      <span className="inline-block font-bold text-lg md:text-2xl mb-8 px-3 py-1 rounded-xl bg-blue-50 dark:bg-gray-800 text-blue-700 dark:text-blue-200">Java Dev • React Learner • Tech Storyteller</span>
-      <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-medium text-gray-800 dark:text-gray-200">Building, teaching, and documenting my transition into freelance web/software development — inspiring SA teens to code, grow, and lead.</p>
-      <div className="flex gap-5 justify-center mb-10">
-        <a href="#projects" className="rounded-2xl bg-gradient-to-r from-blue-500 to-fuchsia-500 text-white px-8 py-3 font-bold text-lg shadow-lg hover:from-blue-600 hover:to-fuchsia-600 transition">View Projects</a>
-        <a href="https://www.tiktok.com/@jaymiller08" target="_blank" rel="noopener" className="rounded-2xl border border-blue-400 dark:border-blue-600 bg-white/50 dark:bg-blue-900/30 text-blue-700 dark:text-white px-8 py-3 font-semibold text-lg shadow hover:bg-blue-50 dark:hover:bg-blue-800/70 transition">Watch my TikTok</a>
-      </div>
-      <div className="flex flex-col gap-2 mt-8 opacity-80 text-base">
-        <span>GitHub stats coming soon…</span>
+    <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="py-24 md:py-32 px-6 flex flex-col items-center text-center bg-gradient-to-b from-primary-50/50 via-white to-white dark:from-accent-900 dark:via-accent-900 dark:to-accent-950">
+      <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight text-accent-900 dark:text-white">Jay Mthethwa</h1>
+      <span className="inline-block font-semibold text-base md:text-lg mb-8 px-5 py-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-800">Java Developer • React Learner • Tech Storyteller</span>
+      <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed text-accent-700 dark:text-accent-300">Building, teaching, and documenting my transition into freelance web and software development — inspiring South African teens to code, grow, and lead.</p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <a href="#projects" className="rounded-lg bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 font-semibold text-base shadow-md hover:shadow-lg transition-all">View Projects</a>
+        <a href="https://www.tiktok.com/@jaymiller08" target="_blank" rel="noopener" className="rounded-lg border-2 border-primary-600 dark:border-primary-500 bg-white dark:bg-accent-800 text-primary-700 dark:text-primary-400 px-8 py-3 font-semibold text-base shadow-sm hover:bg-primary-50 dark:hover:bg-accent-700 transition-all">Watch my TikTok</a>
       </div>
     </motion.section>
   );
@@ -89,7 +86,7 @@ function Hero() {
 
 function App() {
   return (
-    <div className="min-h-screen w-full bg-gradient-to-tr from-blue-50 via-white to-fuchsia-100 dark:from-gray-950 dark:via-black dark:to-blue-950 text-gray-900 dark:text-gray-100 transition-colors">
+    <div className="min-h-screen w-full bg-white dark:bg-accent-950 text-accent-900 dark:text-accent-100 transition-colors">
       <Header />
       <main>
         <Hero />

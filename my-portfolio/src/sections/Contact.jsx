@@ -6,36 +6,36 @@ const socials = [
 ];
 
 const Contact = () => (
-  <section id="contact" className="max-w-2xl mx-auto my-24 px-4 ">
-    <h2 className="text-4xl font-black mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-fuchsia-600 to-blue-400 dark:from-blue-400 dark:to-fuchsia-500">Contact / Hire Me</h2>
+  <section id="contact" className="max-w-2xl mx-auto my-24 px-6">
+    <h2 className="text-4xl font-bold mb-12 text-accent-900 dark:text-white text-center">Contact / Hire Me</h2>
     <form
       action="https://formspree.io/f/your-form-id" // TODO: swap form id or fallback to mailto:
       method="POST"
-      className="bg-white/90 dark:bg-gray-900/80 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border-2 border-blue-50 dark:border-fuchsia-900 flex flex-col gap-7"
+      className="bg-white dark:bg-accent-900 p-10 rounded-xl shadow-lg border border-accent-200 dark:border-accent-700 flex flex-col gap-6"
     >
-      <label className="flex flex-col gap-2 font-bold text-lg">
+      <label className="flex flex-col gap-2 font-semibold text-base">
         <span>Name</span>
-        <input type="text" name="name" required className="rounded-full border py-3 px-5 font-normal text-base bg-blue-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 outline-none" autoComplete="name" />
+        <input type="text" name="name" required className="rounded-lg border border-accent-300 dark:border-accent-700 py-2.5 px-4 font-normal text-base bg-white dark:bg-accent-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all" autoComplete="name" />
       </label>
-      <label className="flex flex-col gap-2 font-bold text-lg">
+      <label className="flex flex-col gap-2 font-semibold text-base">
         <span>Email</span>
-        <input type="email" name="email" required className="rounded-full border py-3 px-5 font-normal text-base bg-blue-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 outline-none" autoComplete="email" />
+        <input type="email" name="email" required className="rounded-lg border border-accent-300 dark:border-accent-700 py-2.5 px-4 font-normal text-base bg-white dark:bg-accent-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all" autoComplete="email" />
       </label>
-      <label className="flex flex-col gap-2 font-bold text-lg">
+      <label className="flex flex-col gap-2 font-semibold text-base">
         <span>Interest</span>
-        <select name="interest" required className="rounded-full border py-3 px-5 font-normal text-base bg-blue-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 outline-none">
+        <select name="interest" required className="rounded-lg border border-accent-300 dark:border-accent-700 py-2.5 px-4 font-normal text-base bg-white dark:bg-accent-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all">
           <option value="">Select an option</option>
           <option value="internship">Internship</option>
           <option value="freelance">Freelance</option>
           <option value="collab">Collab</option>
         </select>
       </label>
-      <label className="flex flex-col gap-2 font-bold text-lg">
+      <label className="flex flex-col gap-2 font-semibold text-base">
         <span>Message</span>
-        <textarea name="message" rows={4} required className="rounded-2xl border py-3 px-5 font-normal text-base bg-blue-50 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+        <textarea name="message" rows={4} required className="rounded-lg border border-accent-300 dark:border-accent-700 py-2.5 px-4 font-normal text-base bg-white dark:bg-accent-800 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all"></textarea>
       </label>
-      <button type="submit" className="rounded-full bg-gradient-to-tr from-blue-600 to-fuchsia-500 text-white py-4 px-10 text-xl font-black shadow-lg mt-3 hover:from-blue-700 hover:to-fuchsia-600 transition">Send</button>
-      <div className="text-sm text-gray-500 dark:text-gray-300 mt-2">Prefer email? <a href="mailto:jay@yourmail.com" className="underline text-blue-600 font-bold">jay@yourmail.com</a></div>
+      <button type="submit" className="rounded-lg bg-primary-600 hover:bg-primary-700 text-white py-3 px-10 text-base font-semibold shadow-md hover:shadow-lg mt-2 transition-all">Send</button>
+      <div className="text-sm text-accent-600 dark:text-accent-400 mt-1">Prefer email? <a href="mailto:jay@yourmail.com" className="underline text-primary-600 dark:text-primary-400 font-semibold hover:text-primary-700 dark:hover:text-primary-300">jay@yourmail.com</a></div>
     </form>
     <div className="flex gap-8 mt-10 justify-center">
       {socials.map(s => (
@@ -45,7 +45,7 @@ const Contact = () => (
           target="_blank"
           rel="noopener"
           aria-label={s.label}
-          className="text-4xl p-3 rounded-full bg-gradient-to-tr from-blue-50 to-fuchsia-50 dark:from-gray-900 dark:to-blue-950 hover:ring-8 ring-blue-100 dark:ring-fuchsia-950 shadow-md transition"
+          className="text-3xl p-3 rounded-lg bg-white dark:bg-accent-900 border border-accent-200 dark:border-accent-700 hover:shadow-lg shadow-sm transition-all"
         >
           <span aria-hidden>{s.icon}</span>
           <span className="sr-only">{s.label}</span>

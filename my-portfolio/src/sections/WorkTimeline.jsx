@@ -16,17 +16,17 @@ const timeline = [
 ];
 
 const WorkTimeline = () => (
-  <section id="work" className="max-w-4xl mx-auto my-24 px-4">
-    <h2 className="text-4xl font-black mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-fuchsia-600 to-blue-400 dark:from-blue-400 dark:to-fuchsia-500">Work & Education</h2>
-    <div className="rounded-3xl bg-white/85 dark:bg-gray-900/70 backdrop-blur-lg shadow-2xl py-12 px-6 md:px-12">
-      <ol className="relative border-l-8 border-fuchsia-200 dark:border-fuchsia-900 ml-4">
+  <section id="work" className="max-w-5xl mx-auto my-24 px-6">
+    <h2 className="text-4xl font-bold mb-12 text-accent-900 dark:text-white">Work & Education</h2>
+    <div className="rounded-xl bg-white dark:bg-accent-900 border border-accent-200 dark:border-accent-700 shadow-lg py-12 px-6 md:px-12">
+      <ol className="relative border-l-4 border-primary-300 dark:border-primary-700 ml-4">
         {timeline.map((item, i) => (
           <li key={item.title} className="mb-12 ml-8 relative">
-            <span className="absolute flex items-center justify-center w-12 h-12 text-3xl rounded-full -left-14 ring-8 ring-fuchsia-100 dark:ring-fuchsia-900 bg-blue-500 text-white shadow-lg">{item.icon}</span>
-            <h3 className="text-2xl font-black leading-tight text-blue-900 dark:text-blue-200 mb-1">{item.title}</h3>
-            <p className="text-base font-bold text-blue-500 dark:text-fuchsia-300 mb-1">{item.org}</p>
-            <span className="block mb-2 text-sm font-medium text-gray-400 dark:text-gray-400">{item.date}</span>
-            <p className="text-lg text-gray-800 dark:text-gray-100">{item.desc}</p>
+            <span className="absolute flex items-center justify-center w-12 h-12 text-3xl rounded-full -left-8 ring-4 ring-white dark:ring-accent-950 bg-primary-600 text-white shadow-md">{item.icon}</span>
+            <h3 className="text-2xl font-bold leading-tight text-accent-900 dark:text-white mb-2">{item.title}</h3>
+            <p className="text-base font-semibold text-primary-600 dark:text-primary-400 mb-1">{item.org}</p>
+            <span className="block mb-3 text-sm font-medium text-accent-500 dark:text-accent-400">{item.date}</span>
+            <p className="text-base leading-relaxed text-accent-700 dark:text-accent-300">{item.desc}</p>
           </li>
         ))}
       </ol>
